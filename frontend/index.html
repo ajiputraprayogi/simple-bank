@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Bank DApp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
+    <h1 class="text-2xl font-bold text-center text-indigo-600 mb-6">💰 My Bank DApp</h1>
+
+    <div class="flex justify-center mb-4">
+      <button id="connectButton" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-4 py-2 rounded-xl transition">Connect Wallet</button>
+    </div>
+
+    <p class="text-center text-sm mb-4">Status: <span id="walletStatus" class="font-medium text-gray-700">Not connected</span></p>
+
+    <div class="mb-6 text-center">
+      <h2 class="text-lg font-semibold">Your Balance</h2>
+      <span id="balance" class="text-2xl font-bold text-green-600">0</span> <span class="text-gray-600">ETH</span>
+    </div>
+
+    <div class="space-y-4">
+      <div>
+        <label for="depositAmount" class="block text-sm font-medium text-gray-700">Deposit Amount (ETH)</label>
+        <input id="depositAmount" type="number" class="w-full px-4 py-2 border rounded-xl mt-1 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g. 1.5">
+        <button id="depositButton" class="mt-2 w-full bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-xl transition">Deposit</button>
+      </div>
+
+      <div>
+        <label for="withdrawAmount" class="block text-sm font-medium text-gray-700">Withdraw Amount (ETH)</label>
+        <input id="withdrawAmount" type="number" class="w-full px-4 py-2 border rounded-xl mt-1 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g. 0.3">
+        <button id="withdrawButton" class="mt-2 w-full bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded-xl transition">Withdraw</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
